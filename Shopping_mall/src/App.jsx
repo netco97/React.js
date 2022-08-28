@@ -8,14 +8,15 @@ import Basket from "./pages/basket";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
 
   return (
     <BrowserRouter>
-      <TopNavigationBar />
+      <TopNavigationBar cart={cart}/>
       <Routes>
         <Route path="/" element={<Home products={products} setProducts={setProducts}/>} />
-        <Route path="/product/:id" element={<Product />} />
-        <Route path="/cart" element={<Basket />} />
+        <Route path="/product/:id" element={<Product cart={cart} setCart={setCart}/>} />
+        <Route path="/cart" element={<Basket cart={cart} setCart={setCart}/>} />
       </Routes>
     </BrowserRouter>
   );

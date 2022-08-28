@@ -194,13 +194,9 @@
 
 /* cart */
 .not {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
 }
 
 .not h2 {
